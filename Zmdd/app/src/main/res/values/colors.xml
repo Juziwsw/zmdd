@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="color_239">#efefef</color>
+
+    <color name="black">#000000</color><!-- 黑色 -->
+    <color name="white">#ffffff</color><!-- 白色 255 -->
+    <color name="red">#ff0000</color><!-- 红色 -->
+    <color name="green">#00ff00</color><!-- 绿色 -->
+    <color name="blue">#0000ff</color><!-- 蓝色 -->
+    <color name="blue_txt">#48D1CC</color>
+    <color name="yellow">#fff000</color><!-- 黄色 -->
+    <color name="gray">#5d5558</color><!-- 灰色 -->
+    <color name="orangle">#dd6817</color><!-- 橙色 -->
+
+    <color name="gray_main_bs">#FF8D8D8D</color><!--main 底部title字体灰度-->
+    <color name="sku_line">#cc061c</color>
+    <color name="color_255_68_92">#FF445C</color><!--rgb 255 ,68 ,92-->
+    <color name="color_255_163_174">#FFA3AE</color><!--rgb 255 ,163 ,174-->
+    <color name="color_245_245_245">#F5F5F5</color><!--rgb 245 ,245 ,245-->
+
+    <color name="base_bgcolor">#FFEDEDED</color><!-- 基本色调 222-->
+    <color name="color_247_247_247">#F7F7F7</color><!--rgb 247 ,247 ,247-->
+    <color name="color_247_37_88">#f82558</color><!--rgb 247_37_88-->
+
+
+
+
+
+
+
+
+    <!--临时的颜色数据-->
+    <color name="teatime_bg">#a39689</color>
+</resources>

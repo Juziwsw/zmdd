@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/white"
+        android:padding="8dp">
+        <EditText
+            android:id="@+id/txt_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/feedback_content_hint"
+            android:background="@null"
+            android:textSize="14sp"
+            />
+    </LinearLayout>
+    <View
+        style="@style/row_style_margin"
+        android:visibility="visible"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:paddingLeft="8dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/feedback_contact"/>
+        <EditText
+            android:id="@+id/feedback_tantact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:background="@null"
+            android:layout_marginLeft="10dp"
+            android:hint="@string/feedback_contact_hint"/>
+    </LinearLayout>
+
+
+</LinearLayout>

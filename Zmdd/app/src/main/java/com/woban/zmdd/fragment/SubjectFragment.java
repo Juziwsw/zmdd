@@ -1,0 +1,78 @@
+package com.woban.zmdd.fragment;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.woban.zmdd.R;
+import com.woban.zmdd.adapter.SearchAdapter;
+import com.woban.zmdd.bean.SearchListItem;
+import com.woban.zmdd.wights.HightListview;
+
+import java.util.ArrayList;
+
+/**
+ * Created by Administrator on 2016/6/21.
+ * @author wsw
+ * 专题界面
+ */
+public class SubjectFragment extends Fragment {
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
+    private String mParam1;
+    private String mParam2;
+    private Context mContext;
+    private View mView;
+
+    private HightListview mListView;
+    private ArrayList<SearchListItem> listItems = new ArrayList<SearchListItem>();
+
+    public static SubjectFragment newInstance(String param1, String param2) {
+        SubjectFragment fragment = new SubjectFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mContext = getActivity();
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+        }
+    }
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        mView = inflater.inflate(R.layout.fragment_subject,container,false);
+        setData();
+        initializeView();
+        return mView;
+    }
+
+    /**
+     * 初始化控件
+     */
+    private void initializeView(){
+        mListView = (HightListview) mView.findViewById(R.id.listview_subject);
+        SearchAdapter searchAdapter = new SearchAdapter(mContext,listItems,R.layout.item_subject);
+        mListView.setAdapter(searchAdapter);
+    }
+
+    private void setData(){
+        for (int i = 0;i < 12;i++){
+            SearchListItem searchListItem = new SearchListItem();
+            searchListItem.title = "盘点“贵妇”面膜，让你美美美一整夏盘点";
+            searchListItem.lookNum = 1300+i;
+            searchListItem.likeNum = 120+i;
+            searchListItem.shareNum = 11+i;
+            listItems.add(searchListItem);
+        }
+
+    }
+}
